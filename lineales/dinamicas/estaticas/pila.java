@@ -61,12 +61,12 @@ class pila {
         }
     }
 
-    // OBTENER TOPE
+    // public Obtener tope
     public Object obtenerTope(){
         return privateObtenerTope();
         
     }
-    
+    // private Obtener tope
     private Object privateObtenerTope(){
         Object elTopeActual = null;
 
@@ -75,5 +75,24 @@ class pila {
             }
             return elTopeActual;
 
+        }
+
+        // public clone
+        public pila clone(){
+            return privateClone();
+        }
+
+        // private clone
+        private pila privateClone(){
+
+            Object [] arregloAux = new Object[TAMANIO];
+
+            if (!esVacia()) {
+                int i = 0;
+                while (this.tope > -1) {
+                    arregloAux[i] = arreglo[tope];
+                    tope--;
+                }
+            }
         }
     }
