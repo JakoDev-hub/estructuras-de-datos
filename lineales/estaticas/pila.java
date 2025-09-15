@@ -1,4 +1,4 @@
-package lineales.dinamicas.estaticas;
+package lineales.estaticas;
 
 class pila {
 
@@ -94,5 +94,6 @@ class pila {
                     tope--;
                 }
             }
+            return arregloAux;
         }
     }
