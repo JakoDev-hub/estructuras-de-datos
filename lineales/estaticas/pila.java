@@ -1,5 +1,7 @@
 package lineales.estaticas;
 
+import lineales.dinamicas.Pila;
+
 class pila {
 
     private int tope;
@@ -84,16 +86,12 @@ class pila {
 
         // private clone
         private pila privateClone(){
-
-            Object [] arregloAux = new Object[TAMANIO];
-
-            if (!esVacia()) {
-                int i = 0;
-                while (this.tope > -1) {
-                    arregloAux[i] = arreglo[tope];
-                    tope--;
-                }
+            pila clone = new pila();
+            clone.tope = this.tope;
+            clone.arreglo = new Object[TAMANIO];
+            for (int i = 0; i <= this.tope; i++){
+                clone.arreglo[i] = this.arreglo[i];
             }
-            return arregloAux;
+            return clone;
         }
     }
