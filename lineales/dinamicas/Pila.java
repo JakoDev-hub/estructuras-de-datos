@@ -59,4 +59,25 @@ public class Pila {
         }
         return s;
     }
+
+    public Pila clone(){
+        return privateClone();
+    }
+
+    private Pila privateClone(){
+
+        Pila pilaClone = new Pila();
+        Pila pilaAux = new Pila();
+        Nodo copia = tope;
+
+        while (!esVacia()) {
+
+            pilaAux.apilar(tope.getElement());
+            tope = tope.getEnlace();
+        }
+        while () {
+            
+        }
+        
+    }
 }
