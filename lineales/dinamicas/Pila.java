@@ -40,7 +40,14 @@ public class Pila {
         }
         return exito;
     }
-    public String toString() {
+
+    // metodo toString
+    public String toString(){
+        return privateToString();
+    }
+
+    // metodo privado toString 
+    private String privateToString() {
         String s = "";
 
         if (this.tope == null) {
@@ -60,10 +67,12 @@ public class Pila {
         return s;
     }
 
+    // metodo clone
     public Pila clone(){
         return privateClone();
     }
 
+    // metodo privado clone
     private Pila privateClone(){
 
         Pila pilaClone = new Pila();
@@ -73,11 +82,14 @@ public class Pila {
         while (!esVacia()) {
 
             pilaAux.apilar(tope.getElement());
-            tope = tope.getEnlace();
+            copia = copia.getEnlace();
         }
         while () {
-            
+            pilaClone.apilar(tope.getElement());
+            copia = copia.getEnlace();
         }
-        
+        return pilaClone;
     }
+    
+
 }

@@ -94,4 +94,6 @@ class pila {
             }
             return clone;
         }
+
+        public 
     }
