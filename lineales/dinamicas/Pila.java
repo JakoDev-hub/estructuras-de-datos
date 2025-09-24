@@ -7,11 +7,13 @@ public class Pila {
     public Pila() {
         this.tope = null;
 
+    // metodo apilar 
     }
     public boolean apilar(Object nuevoElem){
         return privateApilar(nuevoElem);
     }
 
+    // metodo privado apilar
     private boolean privateApilar(Object elem) {
 
         Nodo nuevo = new Nodo(elem, this.tope);
@@ -90,6 +92,4 @@ public class Pila {
         }
         return pilaClone;
     }
-    
-
 }
