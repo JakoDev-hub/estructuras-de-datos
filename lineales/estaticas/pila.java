@@ -1,7 +1,3 @@
-package lineales.estaticas;
-
-import lineales.dinamicas.Pila;
-
 class pila {
 
     private int tope;
@@ -95,5 +91,4 @@ class pila {
             return clone;
         }
 
-        public 
     }

@@ -1,10 +1,10 @@
-package lineales.estaticas;
+
 
 public class Cola{
 
     private Object[] arreglo;
     private int frente, fin; 
-    private int Final static TAMANIO;
+    private  final static int TAMANIO = 0;
     
     public Cola(){
         Object [] arreglo = new Object [this.TAMANIO];
@@ -13,13 +13,13 @@ public class Cola{
     }
 
     // metodo que pregunta si esta vacia la cola
-    public esVacia(){
+    public boolean esVacia(){
         return frente < fin;
     }
     
     // metodo apilar
-    public boolean apilar(){
-        return privateApilar();
+    public boolean apilar(Object elem){
+        return privateApilar(elem);
     }
 
     // metodo privado apilar
@@ -27,7 +27,7 @@ public class Cola{
 
         boolean exito = false;
 
-        if(!esVacia() && frente < this.arreglo.lenght()){
+        if(!esVacia() && frente < this.arreglo.length){
             arreglo[this.frente] = element;
             frente++;
             exito = true;
