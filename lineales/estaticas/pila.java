@@ -91,4 +91,21 @@ class pila {
             return clone;
         }
 
+        public String toString(){
+            return privateToString();
+        }
+
+        private String privateToString(){
+
+            String strArreglo = "{ ";
+
+            if ( !esVacia() ) {
+                int i = 0;
+                while (arreglo[i] != null) {
+                    strArreglo = arreglo[i] + " , ";
+                    
+                }
+            }
+            return strArreglo + " }";
+        }
     }

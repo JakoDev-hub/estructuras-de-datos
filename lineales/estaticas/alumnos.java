@@ -75,7 +75,4 @@ public class alumnos{
     public void setTipoDni(String tipoDni) {
         this.tipoDni = tipoDni;
     }
-
-
-    
 }
