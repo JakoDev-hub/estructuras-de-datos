@@ -50,10 +50,35 @@ public class Lista {
     }
 
     // metodo eliminar 
-    public void eliminar(int pos){
+    public boolean eliminar(int pos){
         boolean exito = false;
         if (!esVacia()) {
-            
+            cabecera.setElement(null);;
+            exito = true;
         }
+        return exito;
+    }
+
+    // metodo localizar
+    public int localizar (Object buscado){
+
+        // devuelve la posicion del elemento buscado 
+        // si el elemento no existe devuelve -1
+        int pos;
+
+        // avanza buscando el elemento
+        Nodo auxiliar = this.cabecera;
+        int i = 0;
+        while (auxiliar != null && !auxiliar.getElement().equals(buscado)) {
+            auxiliar = auxiliar.getEnlace();
+            i++;
+        }
+        // sale porque aux = null (error) o pq encontro el elemento (pos i)
+        if (auxiliar == null) {
+            pos = -1;
+        }else{
+            pos = i;
+        }
+    return pos;
     }
 }
