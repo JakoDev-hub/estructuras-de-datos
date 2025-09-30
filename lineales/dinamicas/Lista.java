@@ -8,14 +8,14 @@ public class Lista {
         cabecera = null;
     }
 
-    // metodo verifica si es vacia
+    // metodo es vacia
     public boolean esVacia(){
-        return cabecera == null;
+        return cabecera == null;// metodo verifica si es vacia
     }
 
-    // metodo privado insertar
+    // metodo insertar
     public boolean insertar(Object  nuevoElem, int pos){
-
+        //  Agrega el elemento pasado por parámetro en la posición pos
         boolean exito = false;
 
         if (pos<1 || pos< this.longitud() + 1 ) {
@@ -36,9 +36,20 @@ public class Lista {
         }
         return exito;
     }
-    
-    // metodo privado longitud
+    // metodo vaciar
+    public void vaciar(){
+        // quita todos los elementos de la lista
+        if ( !esVacia()) {
+            while (cabecera.getEnlace()!= null) {
+                cabecera.setElement(null);
+                cabecera.getEnlace();
+            }
+        }
+    }
+
+    // metodo longitud
     public int longitud(){
+        // Devuelve la cantidad de elementos de la lista.
         int longitudLista = 0;
         if ( !esVacia() ) {
             while (cabecera.getElement()!= null) {
@@ -49,8 +60,25 @@ public class Lista {
         return longitudLista;
     }
 
+    // metodo recuperar
+    public Object recuperar(int numero){
+        Object elem = null;
+
+        if ( !esVacia() ) {
+            int i = 0;
+            while (i <= numero) {
+                if (i == numero) {
+                    elem = cabecera.getElement();
+                }
+                cabecera = cabecera.getEnlace();
+            }
+        }
+        return elem;
+    } 
+
     // metodo eliminar 
     public boolean eliminar(int pos){
+        // Borra el elemento de la posición pos
         boolean exito = false;
         if (!esVacia()) {
             cabecera.setElement(null);;
@@ -80,5 +108,18 @@ public class Lista {
             pos = i;
         }
     return pos;
+    }
+    public String toString(){
+
+        String strLista = "{ ";// variable que almacena la lista
+        int i = 0; // variable que incrementa por cada nodo recorrido
+        while (i<longitud()+1) {
+            if (cabecera.getElement()!= null) {
+                strLista = strLista + cabecera.getElement();
+                cabecera.getEnlace();
+            }
+            
+        }
+        return strLista + " }";
     }
 }
