@@ -10,13 +10,8 @@ class pila {
         this.tope = -1;
     }
 
-    // public module
-    public boolean apilar(Object newElement) {
-        return privateApilar(newElement);
-    }
-
-    // private module
-    private boolean privateApilar(Object elem) {
+    // public apilar
+    public boolean Apilar(Object elem) {
         boolean exito;
         if (this.tope + 1 >= TAMANIO) {
             exito = false;
@@ -27,14 +22,9 @@ class pila {
         }
         return exito;
     }
-
-    // public module
-    public boolean desapilar() {
-        return privateDesapilar();
-    }
-
-    //
-    private boolean privateDesapilar() {
+    
+    // metodo desapilar
+    public boolean Desapilar() {
         boolean exito = false;
 
         if (!esVacia()) {
@@ -59,14 +49,8 @@ class pila {
         }
     }
 
-    // public Obtener tope
-    public Object obtenerTope() {
-        return privateObtenerTope();
-
-    }
-
-    // private Obtener tope
-    private Object privateObtenerTope() {
+    // Obtener tope
+    public Object ObtenerTope() {
         Object elTopeActual = null;
 
         if (!esVacia()) {
@@ -76,13 +60,8 @@ class pila {
 
     }
 
-    // public clone
-    public pila clone() {
-        return privateClone();
-    }
-
-    // private clone
-    private pila privateClone() {
+    // clone
+    public pila Clone() {
         pila clone = new pila();
         clone.tope = this.tope;
         clone.arreglo = new Object[TAMANIO];
@@ -93,12 +72,7 @@ class pila {
     }
 
     // metodo toString
-    public String toString() {
-        return privateToString();
-    }
-
-    // metodo privado toString
-    private String privateToString() {
+    public String ToString() {
 
         String strArreglo = "{ ";
 

@@ -32,10 +32,10 @@ public class Lista {
                 Nodo nuevo = new Nodo(nuevoElem, aux.getEnlace());
                 aux.getEnlace();
             }
-
         }
         return exito;
     }
+    
     // metodo vaciar
     public void vaciar(){
         // quita todos los elementos de la lista

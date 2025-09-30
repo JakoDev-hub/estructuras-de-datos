@@ -17,12 +17,7 @@ public class Cola {
     }
 
     // metodo apilar
-    public boolean apilar(Object elem) {
-        return privateApilar(elem);
-    }
-
-    // metodo privado apilar
-    private boolean privateApilar(Object element) {
+    public boolean Apilar(Object element) {
 
         boolean exito = false;
 
@@ -36,12 +31,7 @@ public class Cola {
     }
 
     // metodo desapilar
-    public boolean desapilar() {
-        return privateDesapilar();
-    }
-
-    // metodo privado desapilar
-    private boolean privateDesapilar() {
+    public boolean Desapilar() {
 
         boolean exito = false;
 
@@ -58,12 +48,7 @@ public class Cola {
     }
 
     // metodo obtenerFrente
-    public Object obtenerFrente() {
-        return privateObtenerFrente();
-    }
-
-    // metodo privado obtenerFrente
-    private Object privateObtenerFrente() {
+    public Object ObtenerFrente() {
 
         Object element = null;
 
@@ -80,13 +65,8 @@ public class Cola {
         this.frente = 0;
         this.fin = 0;
     }
-
-    public String toString() {
-        return privateToString();
-
-    }
-
-    private String privateToString() {
+    //metodo toString
+    public String ToString() {
 
         String strArreglo = "{ ";
 
