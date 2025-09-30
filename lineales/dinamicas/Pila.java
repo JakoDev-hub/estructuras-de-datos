@@ -86,7 +86,7 @@ public class Pila {
             pilaAux.apilar(tope.getElement());
             copia = copia.getEnlace();
         }
-        while () {
+        while (!esVacia()) {
             pilaClone.apilar(tope.getElement());
             copia = copia.getEnlace();
         }
