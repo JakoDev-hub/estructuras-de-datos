@@ -11,29 +11,28 @@ public class arbolBinario {
     public boolean esVacia(){
         return raiz == null;
     }
-    public boolean insertar(Object nuevoElem, NodoArbol padre, char pos){
 
-        boolean exito = false;
-        if ( !esVacia()) {
-            if (raiz.equals(padre)) {
-                if (pos == 'i'&& raiz.getIzquierdo()!= null) {
-                    NodoArbol nuevo = new NodoArbol(nuevoElem,null , null);
-                    raiz.setIzquierdo(nuevo);
-                }else if (pos == 'd'&& raiz.getDerecho()!= null) {
-                    NodoArbol nuevo = new NodoArbol(nuevoElem, null, null);
-                    raiz.setDerecho(nuevo);
-                }
-            }
-            if (raiz.getIzquierdo()!= null) {
-                raiz.getIzquierdo();
-            }
-            if (raiz.getDerecho()!= null) {
-                raiz.getIzquierdo();
-            }    
-            
+    public boolean insertar(Object nuevoElem, Object elemPadre,char pos){
+        boolean exito = true;
+        if(this.raiz == null){
+            this.raiz = new NodoArbol(nuevoElem,null,null);
+        }else{
+            NodoArbol nodoPadre = 
         }
-        return exito;
     }
 
+    public Object obtenerNodo(){
+
+    }
+
+    public listarPreOrden(){
+        Lista lispre = new Lista()
+        listarPreOrdenAux(this.raiz,lis);
+        return lis;
+    }
+    private void listarPreOrdenAux(NodoArbol nodo, Lista lis){
+
+        if()
+    }
     
 }
