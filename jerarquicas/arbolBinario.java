@@ -100,7 +100,6 @@ public class arbolBinario {
                 numero--;
             }
         }
-        return resultado;
     } 
 }
 
