@@ -1,4 +1,5 @@
-class pila {
+package lineales.estaticas;
+public class pila {
 
     private int tope;
     private Object[] arreglo;

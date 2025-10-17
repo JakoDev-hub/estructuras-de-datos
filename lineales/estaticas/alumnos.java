@@ -1,4 +1,4 @@
-
+package lineales.estaticas;
 public class alumnos{
     
     private int numDni,telefono, numero, ciudad;
